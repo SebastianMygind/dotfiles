@@ -1,0 +1,9 @@
+[env]
+
+[terminal]
+shell = {program = "/usr/bin/fish"}
+
+[window]
+opacity = 0.85
+padding = { x = 15, y = 10 }
+dimensions = { columns = 120, lines = 35 }

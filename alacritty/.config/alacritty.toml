@@ -1,9 +1,0 @@
-[env]
-
-[terminal.shell]
-program = "/usr/bin/fish"
-
-[window]
-opacity = 0.6
-padding = { x = 15, y = 10 }
-
