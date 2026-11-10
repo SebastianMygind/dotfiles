@@ -7,4 +7,5 @@ end
 
 mise activate fish | source
 
-set PATH ~/.local/bin $PATH
+fish_add_path ~/.local/bin/
+fish_add_path ~/.cargo/bin/
