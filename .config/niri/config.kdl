@@ -74,7 +74,7 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 4
+        width 2
         active-color "#7fc8ff"
         inactive-color "#505050"
     }
@@ -116,7 +116,7 @@ spawn-at-startup "noctalia"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-    // skip-at-startup
+    skip-at-startup
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -150,20 +150,6 @@ layer-rule {
     place-within-backdrop true
 }
 
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://yalter.github.io/niri/Configuration:-Window-Rules
-
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
 // Maximized windows
 window-rule {
     // This app-id regular expression will work for both:
@@ -189,7 +175,7 @@ window-rule {
 
 window-rule {
   // Rounded corners for a modern look.
-  geometry-corner-radius 12
+  geometry-corner-radius 6
 
   // Clips window contents to the rounded corner boundaries.
   clip-to-geometry true
