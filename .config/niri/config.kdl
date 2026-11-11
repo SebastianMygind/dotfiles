@@ -47,20 +47,21 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
-// You can configure outputs by their name, which you can find
-// by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Find more information on the wiki:
-// https://yalter.github.io/niri/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
 output "BOE NE135A1M-NY1 Unknown" {
     mode "2880x1920@120.000"
     variable-refresh-rate on-demand=true
     scale 2.0
 }
+
+output "ASUSTek COMPUTER INC VG27AQ3A SALMAS023586" {
+    mode "2560x1440@180.001"
+    variable-refresh-rate on-demand=true
+    scale 1.5
+}
+
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 8
    
     center-focused-column "never"
 
@@ -123,7 +124,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -220,8 +221,12 @@ binds {
     XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
     XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
     XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+    XF86AudioPrev { spawn-sh "noctalia msg media previous"; }
+    XF86AudioPlay { spawn-sh "noctalia msg media play-pause"; }
+    XF86AudioNext { spawn-sh "noctalia msg media next"; }
     XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
     XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+    
 
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
