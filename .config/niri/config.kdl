@@ -47,6 +47,12 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
+cursor {
+    xcursor-theme "breeze_cursors"
+    xcursor-size 24
+}
+
+
 output "BOE NE135A1M-NY1 Unknown" {
     mode "2880x1920@120.000"
     variable-refresh-rate on-demand=true
