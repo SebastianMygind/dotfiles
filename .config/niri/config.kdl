@@ -49,7 +49,7 @@ input {
 
 cursor {
     xcursor-theme "breeze_cursors"
-    xcursor-size 24
+    xcursor-size 18
 }
 
 
